@@ -260,7 +260,6 @@ export default function Library() {
             height: '34px',
           }}
         />
-        <span style={{ flexShrink: 0, whiteSpace: 'nowrap' }}><StorageText /></span>
       </div>
 
       {isSearchMode ? (
@@ -390,7 +389,10 @@ export default function Library() {
 
           {typeFilter === 'movie' && (
             <section>
-              <div className="section-label">films</div>
+              <div className="section-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <span>films</span>
+                <StorageText />
+              </div>
               {libraryLoading && <p style={{ fontSize: '12px', color: 'var(--muted)', fontStyle: 'italic' }}>loading...</p>}
               {libraryError  && <p style={{ fontSize: '12px', color: 'var(--accent)', fontStyle: 'italic' }}>fetch error</p>}
               {!libraryLoading && !libraryError && library?.movies.length === 0 && (
@@ -416,7 +418,10 @@ export default function Library() {
 
           {typeFilter === 'show' && (
             <section>
-              <div className="section-label">tv</div>
+              <div className="section-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <span>tv</span>
+                <StorageText />
+              </div>
               {libraryLoading && <p style={{ fontSize: '12px', color: 'var(--muted)', fontStyle: 'italic' }}>loading...</p>}
               {libraryError  && <p style={{ fontSize: '12px', color: 'var(--accent)', fontStyle: 'italic' }}>fetch error</p>}
               {!libraryLoading && !libraryError && library?.shows.length === 0 && (
