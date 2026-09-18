@@ -126,19 +126,6 @@ h1, h2, h3, h4, h5, h6 { color: var(--white); font-weight: 700; }
   font-style: italic;
 }
 
-/* ── Status dots ── */
-
-.status-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  flex-shrink: 0;
-}
-
-.status-dot--up      { background: var(--green); }
-.status-dot--down    { background: var(--accent); }
-.status-dot--unknown { background: var(--amber); }
-
 /* ── Ghost button — compact inline, dashed outline ── */
 
 .btn-ghost {
