@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import type { StorageInfo } from '../../types/status'
 import { formatBytes } from '../../utils/format'
-import { StatBar } from './StatBar'
 
 const STORAGE_POLL_MS = 30_000
 
-export default function StorageBar() {
+export default function StorageText() {
   const [storage, setStorage] = useState<StorageInfo | null>(null)
 
   useEffect(() => {
@@ -25,12 +24,8 @@ export default function StorageBar() {
   if (!storage) return null
 
   return (
-    <div style={{ marginBottom: '20px', maxWidth: '320px' }}>
-      <StatBar
-        label="storage"
-        fraction={storage.total > 0 ? storage.used / storage.total : 0}
-        text={`${formatBytes(storage.used)} / ${formatBytes(storage.total)}`}
-      />
-    </div>
+    <span style={{ fontSize: '11px', color: 'var(--muted)', fontStyle: 'italic' }}>
+      {formatBytes(storage.used)} / {formatBytes(storage.total)} used
+    </span>
   )
 }

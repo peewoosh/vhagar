@@ -136,29 +136,8 @@ h1, h2, h3, h4, h5, h6 { color: var(--white); font-weight: 700; }
 }
 
 .status-dot--up      { background: var(--green); }
-.status-dot--down    { background: var(--accent); animation: pulse 1.5s ease-in-out infinite; }
+.status-dot--down    { background: var(--accent); }
 .status-dot--unknown { background: var(--amber); }
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.25; }
-}
-
-/* ── Stat bars ── */
-
-.bar-track {
-  display: inline-block;
-  width: 80px;
-  height: 3px;
-  background: var(--border);
-  vertical-align: middle;
-}
-
-.bar-fill {
-  display: block;
-  height: 100%;
-  background: var(--accent);
-}
 
 /* ── Ghost button — compact inline, dashed outline ── */
 

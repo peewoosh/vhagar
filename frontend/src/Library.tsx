@@ -7,7 +7,7 @@ import SearchModal from './components/library/SearchModal'
 import LibraryModal from './components/library/LibraryModal'
 import QueueRow from './components/library/QueueRow'
 import DownloadRow from './components/library/DownloadRow'
-import StorageBar from './components/shared/StorageBar'
+import StorageText from './components/shared/StorageText'
 
 type TypeFilter = 'movie' | 'show'
 
@@ -227,8 +227,6 @@ export default function Library() {
 
   return (
     <div>
-      <StorageBar />
-
       {/* search bar + type filter */}
       <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: '4px', flexShrink: 0 }}>
@@ -391,7 +389,10 @@ export default function Library() {
 
           {typeFilter === 'movie' && (
             <section>
-              <div className="section-label">films</div>
+              <div className="section-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <span>films</span>
+                <StorageText />
+              </div>
               {libraryLoading && <p style={{ fontSize: '12px', color: 'var(--muted)', fontStyle: 'italic' }}>loading...</p>}
               {libraryError  && <p style={{ fontSize: '12px', color: 'var(--accent)', fontStyle: 'italic' }}>fetch error</p>}
               {!libraryLoading && !libraryError && library?.movies.length === 0 && (
@@ -417,7 +418,10 @@ export default function Library() {
 
           {typeFilter === 'show' && (
             <section>
-              <div className="section-label">tv</div>
+              <div className="section-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <span>tv</span>
+                <StorageText />
+              </div>
               {libraryLoading && <p style={{ fontSize: '12px', color: 'var(--muted)', fontStyle: 'italic' }}>loading...</p>}
               {libraryError  && <p style={{ fontSize: '12px', color: 'var(--accent)', fontStyle: 'italic' }}>fetch error</p>}
               {!libraryLoading && !libraryError && library?.shows.length === 0 && (
