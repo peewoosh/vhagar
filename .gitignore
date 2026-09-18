@@ -1,0 +1,6 @@
+.env
+.claude/
+node_modules/
+dist/
+backend/public/
+**/.DS_Store
