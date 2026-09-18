@@ -260,9 +260,8 @@ export default function Library() {
             height: '34px',
           }}
         />
+        <span style={{ flexShrink: 0, whiteSpace: 'nowrap' }}><StorageText /></span>
       </div>
-
-      <div style={{ marginBottom: '20px' }}><StorageText /></div>
 
       {isSearchMode ? (
         <div>
