@@ -53,53 +53,6 @@ h1, h2, h3, h4, h5, h6 { color: var(--white); font-weight: 700; }
 
 /* ── Shared UI text: nav links, card names, page headings ── */
 
-.ui-text {
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: var(--text);
-}
-
-/* ── Top nav — grid layout for true centering ── */
-
-.topnav {
-  height: 48px;
-  background: var(--bg);
-  border-bottom: 1px dashed var(--border);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.topnav-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.topnav-center {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.topnav-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.topnav-link {
-  padding: 4px 0;
-}
-
-.topnav-link--active { color: var(--accent); }
-
-@media (max-width: 600px) {
-  .topnav { padding: 0 14px; }
-  .topnav-center { gap: 18px; }
-}
-
 /* ── Main content ── */
 
 .main-content {
